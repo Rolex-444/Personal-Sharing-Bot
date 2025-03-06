@@ -239,7 +239,7 @@ if not await check_verification(client, message.from_user.id) and VERIFY == True
         protect_content=True,
         reply_markup=InlineKeyboardMarkup(btn
     )
-   return
+return
 @Bot.on_message(filters.command('users') & filters.private & filters.user(ADMINS))
 async def get_users(client: Bot, message: Message):
     msg = await client.send_message(chat_id=message.chat.id, text=WAIT_MSG)
